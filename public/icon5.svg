@@ -1,0 +1,4 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" data-omni-part="icon-svg" data-omni-icon-size="medium">
+  <path d="M11.5 16.5v-1.59c-.58-.21-1-.76-1-1.41 0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5c0 .65-.42 1.2-1 1.41v1.59c0 .28-.22.5-.5.5s-.5-.22-.5-.5Z"></path>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 8h.5c1.1 0 2 .9 2 2v5c0 3.31-2.69 6-6 6h-4c-3.31 0-6-2.69-6-6v-5c0-1.1.9-2 2-2h.5V7c0-3.03 2.47-5.5 5.5-5.5s5.5 2.47 5.5 5.5v1ZM12 3.5c-1.93 0-3.5 1.57-3.5 3.5v1h7V7c0-1.93-1.57-3.5-3.5-3.5ZM14 19c2.21 0 4-1.79 4-4v-5H6v5c0 2.21 1.79 4 4 4h4Z"></path>
+</svg>
