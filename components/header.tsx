@@ -1,31 +1,123 @@
-'use client'
-import Image from 'next/image'
-import React, { useState } from 'react'
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { ChevronDownIcon } from 'lucide-react'
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDownIcon } from "lucide-react";
 
 const Header = () => {
-
-    const [language, setLanguage] = useState<'English'| 'Français'>('English')
+  const [language, setLanguage] = useState<"English" | "Español">("English");
+  const [country, setCountry] = useState<
+    "United States" | "Canada" | "United Kingdom"
+  >("United States");
 
   return (
-    <header className='min-h-14 flex bg-zinc-50 items-center p-4 justify-between border-b border-b-slate-950'>
-      <div>
-        <Image src={'/logo1.svg'} alt='logo' width={100} height={100} /> 
-      </div>
+    <header className="h-[80px] flex bg-white items-center py-2 border-b border-gray-200">
+      <div className="w-full max-w-[80%] mx-auto flex items-center justify-between">
+        <div className="flex items-center">
+          <Image
+            src="/logo1.svg"
+            alt="logo"
+            width={120}
+            height={36}
+            className="h-9"
+          />
+        </div>
 
-      <div className="menus flex flex-row gap-4">
-        <Menu>
-          <MenuButton className={'flex flex-row gap-1'}> <Image src={'/Symbols.svg'} alt='logo' width={20} height={50} /> <ChevronDownIcon className="w-5 h-5" /> </MenuButton>
-
-        </Menu>
-        <Menu>
-          <MenuButton className={'flex flex-row gap-1'}> {language}  <ChevronDownIcon className="w-5 h-5" />  </MenuButton>
-
-        </Menu>
+        <div className="menus flex flex-row gap-3 items-center">
+          <Menu as="div" className="relative">
+            <MenuButton
+              className={
+                "flex flex-row gap-1.5 items-center text-sm text-gray-700 hover:text-gray-900 px-2 py-1.5 rounded hover:bg-gray-50"
+              }
+            >
+              <Image
+                src={"/Symbols.svg"}
+                alt="flag"
+                width={20}
+                height={14}
+                className="h-3.5"
+              />
+              <ChevronDownIcon className="w-4 h-4" />
+            </MenuButton>
+            <MenuItems className="absolute right-0 mt-1 w-40 origin-top-right rounded-b-md bg-white shadow-b-lg border-t-0 border border-gray-200 py-1 z-50 outline-none focus:outline-none">
+              <MenuItem>
+                {({ active }) => (
+                  <button
+                    onClick={() => setCountry("United States")}
+                    className={`${
+                      active ? "bg-gray-100" : ""
+                    } block w-full text-left px-4 py-2 text-sm text-gray-700`}
+                  >
+                    United States
+                  </button>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ active }) => (
+                  <button
+                    onClick={() => setCountry("Canada")}
+                    className={`${
+                      active ? "bg-gray-100" : ""
+                    } block w-full text-left px-4 py-2 text-sm text-gray-700`}
+                  >
+                    Canada
+                  </button>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ active }) => (
+                  <button
+                    onClick={() => setCountry("United Kingdom")}
+                    className={`${
+                      active ? "bg-gray-100" : ""
+                    } block w-full text-left px-4 py-2 text-sm text-gray-700`}
+                  >
+                    United Kingdom
+                  </button>
+                )}
+              </MenuItem>
+            </MenuItems>
+          </Menu>
+          <Menu as="div" className="relative">
+            <MenuButton
+              className={
+                "flex flex-row gap-1.5 items-center text-sm text-gray-700 hover:text-gray-900 px-2 py-1.5 rounded hover:bg-gray-50"
+              }
+            >
+              {language}
+              <ChevronDownIcon className="w-4 h-4" />
+            </MenuButton>
+            <MenuItems className="absolute right-0 mt-1 w-32 origin-top-right rounded-b-md bg-white shadow-lg border-t-0 border border-gray-200 py-1 z-0 outline-none focus:outline-none">
+              <MenuItem>
+                {({ active }) => (
+                  <button
+                    onClick={() => setLanguage("English")}
+                    className={`${
+                      active ? "bg-gray-100" : ""
+                    } block w-full text-left px-4 py-2 text-sm text-gray-700`}
+                  >
+                    English
+                  </button>
+                )}
+              </MenuItem>
+              <MenuItem>
+                {({ active }) => (
+                  <button
+                    onClick={() => setLanguage("Español")}
+                    className={`${
+                      active ? "bg-gray-100" : ""
+                    } block w-full text-left px-4 py-2 text-sm text-gray-700`}
+                  >
+                    Español
+                  </button>
+                )}
+              </MenuItem>
+            </MenuItems>
+          </Menu>
+        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
