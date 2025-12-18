@@ -34,8 +34,8 @@ const Header = () => {
               <Image
                 src={flag}
                 alt="flag"
-                width={30}
-                height={20}
+                width={50}
+                height={30}
                 className="h-3.5"
               />
               <ChevronDownIcon className="w-4 h-4" />

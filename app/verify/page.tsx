@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 
 const VerificationPage = () => {
   return (
-    <div className="w-full min-h-[calc(100vh-56px)] bg-[#E8ECEF] flex flex-col items-center pt-16 px-4">
+    <div className="w-full min-h-[calc(100vh-56px)] bg-gray-50 flex flex-col items-center pt-16 px-4">
       <div className="w-full max-w-[600px] flex flex-col items-center gap-6">
         {/* Header Section */}
         <div className="w-full flex flex-col items-center gap-1">

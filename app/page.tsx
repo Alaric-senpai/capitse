@@ -53,7 +53,7 @@ export default function Home() {
         <title>Sign In</title>
       </Head>
       <div className="w-full max-w-[80%] mx-auto flex flex-col items-center gap-6">
-        <div className="w-full max-w-[400px] px-12 py-8 border border-gray-200 rounded-md shadow-md bg-white">
+        <div className="w-full max-w-[400px]  px-12 py-8 border border-gray-300 rounded-md  bg-white">
           <div className="flex flex-col items-center justify-center w-full mb-6 gap-4">
             <Image
               src="/logo1.svg"
