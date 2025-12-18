@@ -6,6 +6,7 @@ import { ChevronDownIcon } from "lucide-react";
 
 const Header = () => {
   const [language, setLanguage] = useState<"English" | "Español">("English");
+  const [flag, setFlag] = useState("/unitedstates.svg");
   const [country, setCountry] = useState<
     "United States" | "Canada" | "United Kingdom"
   >("United States");
@@ -31,10 +32,10 @@ const Header = () => {
               }
             >
               <Image
-                src={"/Symbols.svg"}
+                src={flag}
                 alt="flag"
-                width={20}
-                height={14}
+                width={30}
+                height={20}
                 className="h-3.5"
               />
               <ChevronDownIcon className="w-4 h-4" />
@@ -43,7 +44,7 @@ const Header = () => {
               <MenuItem>
                 {({ active }) => (
                   <button
-                    onClick={() => setCountry("United States")}
+                    onClick={() => setFlag("unitedstates.svg")}
                     className={`${
                       active ? "bg-gray-100" : ""
                     } block w-full text-left px-4 py-2 text-sm text-gray-700`}
@@ -55,7 +56,7 @@ const Header = () => {
               <MenuItem>
                 {({ active }) => (
                   <button
-                    onClick={() => setCountry("Canada")}
+                    onClick={() => setFlag("Symbols.svg")}
                     className={`${
                       active ? "bg-gray-100" : ""
                     } block w-full text-left px-4 py-2 text-sm text-gray-700`}
@@ -67,7 +68,7 @@ const Header = () => {
               <MenuItem>
                 {({ active }) => (
                   <button
-                    onClick={() => setCountry("United Kingdom")}
+                    onClick={() => setFlag("Uk.svg")}
                     className={`${
                       active ? "bg-gray-100" : ""
                     } block w-full text-left px-4 py-2 text-sm text-gray-700`}
