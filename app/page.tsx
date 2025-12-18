@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Field, FieldError, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { sendEmail } from "@/lib/fun";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -123,11 +123,12 @@ export default function Home() {
                         placeholder=""
                       />
                     </div>
-                    {form.formState.errors.username && (
+                    <FieldError />
+                    {/* {form.formState.errors.username && (
                       <p className="text-xs text-red-600 mt-1">
                         This field is required.
                       </p>
-                    )}
+                    )} */}
                   </Field>
                 )}
               />
